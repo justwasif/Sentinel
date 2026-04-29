@@ -1,0 +1,9 @@
+{
+  "network": "0G Galileo Testnet",
+  "chainId": 16602,
+  "deployer": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10",
+  "SentinelINFT": "0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1",
+  "PositionRegistry": "0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A",
+  "InferenceGuard": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5",
+  "deployedAt": "2026-04-29T08:34:24.372Z"
+}
