@@ -1,0 +1,65 @@
+{
+  "name": "sentinel-spark-liquidation-shield",
+  "version": "1.0.0",
+  "description": "Automated liquidation protection for Spark lending positions on 0G Galileo. Monitors health factor and triggers repayment or collateral addition when the position approaches the liquidation threshold.",
+  "type": "LIQUIDATION_PROTECTION",
+  "trigger": {
+    "type": "HEALTH_FACTOR_MONITOR",
+    "description": "Polls Spark protocol health factor at regular intervals",
+    "protocol": "Spark",
+    "network": "galileo",
+    "chainId": 16602,
+    "pollIntervalMs": 15000,
+    "condition": "healthFactor < threshold"
+  },
+  "conditions": [
+    {
+      "id": "hf-below-threshold",
+      "description": "Position health factor has dropped below the safe threshold",
+      "type": "COMPARISON",
+      "field": "healthFactor",
+      "operator": "LESS_THAN",
+      "value": 1.2,
+      "unit": "ratio",
+      "severity": "HIGH"
+    }
+  ],
+  "actions": [
+    {
+      "id": "protect-position",
+      "type": "REPAY_DEBT",
+      "description": "Repay a portion of the debt to bring the health factor back above the safe threshold",
+      "fallback": {
+        "type": "ADD_COLLATERAL",
+        "description": "If repayment is not possible, add additional collateral to reduce liquidation risk"
+      },
+      "params": {
+        "targetHealthFactor": 1.5,
+        "maxRepaymentUSD": 10000,
+        "slippageTolerance": 0.005
+      }
+    }
+  ],
+  "retryPolicy": {
+    "maxAttempts": 3,
+    "backoff": "exponential",
+    "baseDelayMs": 1000,
+    "maxDelayMs": 8000
+  },
+  "payment": {
+    "method": "x402",
+    "currency": "USDC",
+    "maxAmount": "1.00",
+    "network": "galileo"
+  },
+  "metadata": {
+    "protocol": "Spark",
+    "network": "galileo",
+    "chainId": 16602,
+    "author": "Sentinel",
+    "category": "liquidation-protection",
+    "tags": ["defi", "lending", "spark", "0g", "sentinel"],
+    "createdAt": "2026-04-29T00:00:00.000Z",
+    "marketplaceListing": true
+  }
+}

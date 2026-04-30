@@ -1,0 +1,62 @@
+{
+  "name": "sentinel-lp-range-rebalancer",
+  "version": "1.0.0",
+  "description": "Automated LP position rebalancing for Uniswap V3 on 0G Galileo. Monitors the current pool tick against the registered position range and triggers a rebalance when the position falls out of range and stops earning fees.",
+  "type": "LP_REBALANCE",
+  "trigger": {
+    "type": "TICK_RANGE_MONITOR",
+    "description": "Polls Uniswap V3 pool slot0() to detect when current tick moves outside the LP position range",
+    "protocol": "UniswapV3",
+    "network": "galileo",
+    "chainId": 16602,
+    "pollIntervalMs": 15000,
+    "condition": "currentTick outside [tickLower, tickUpper]"
+  },
+  "conditions": [
+    {
+      "id": "tick-out-of-range",
+      "description": "Current pool tick has moved outside the LP position's registered tick range",
+      "type": "RANGE_CHECK",
+      "field": "currentTick",
+      "operator": "OUTSIDE_RANGE",
+      "lowerBound": "tickLower",
+      "upperBound": "tickUpper",
+      "severity": "MEDIUM"
+    }
+  ],
+  "actions": [
+    {
+      "id": "rebalance-lp",
+      "type": "REBALANCE_LP_POSITION",
+      "description": "Remove liquidity from the out-of-range position and re-add it centered around the current tick with the same range width",
+      "params": {
+        "strategy": "center-around-current-tick",
+        "preserveRangeWidth": true,
+        "slippageTolerance": 0.005,
+        "maxGasGwei": 100
+      }
+    }
+  ],
+  "retryPolicy": {
+    "maxAttempts": 3,
+    "backoff": "exponential",
+    "baseDelayMs": 1000,
+    "maxDelayMs": 8000
+  },
+  "payment": {
+    "method": "x402",
+    "currency": "USDC",
+    "maxAmount": "1.00",
+    "network": "galileo"
+  },
+  "metadata": {
+    "protocol": "UniswapV3",
+    "network": "galileo",
+    "chainId": 16602,
+    "author": "Sentinel",
+    "category": "lp-management",
+    "tags": ["defi", "uniswap", "lp", "rebalance", "0g", "sentinel"],
+    "createdAt": "2026-04-29T00:00:00.000Z",
+    "marketplaceListing": true
+  }
+}

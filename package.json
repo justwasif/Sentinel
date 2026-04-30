@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "coordinator": "node agents/coordinator/index.js",
+    "yield-agent": "node agents/yieldAgent.js",
+    "publish-workflows": "node workflows/workflowPublisher.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "wasif",
   "license": "ISC",
-  "description": "",
+  "description": "Sentinel — multi-agent DeFi position guardian powered by 0G + KeeperHub",
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
     "ethers": "^6.13.4",
@@ -15,6 +18,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
-    "dotenv": "^17.4.2"
+    "axios": "^1.7.9",
+    "dotenv": "^17.4.2",
+    "winston": "^3.17.0"
   }
 }
