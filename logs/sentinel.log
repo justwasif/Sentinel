@@ -411,3 +411,92 @@ Require stack:
 [2026-05-03 02:05:01] [DEBUG] Coordinator: Queue empty, waiting...
 [2026-05-03 02:05:04] [INFO] Coordinator: YIELD proposal enqueued — executionId: 0xfe567accfba85c... priority: 2 queue size: 1
 [2026-05-03 02:05:04] [INFO] Coordinator: consumeProof confirmed — executionId: 0xd9e845c11794a8...
+[2026-05-03 02:21:34] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 02:21:34] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 02:21:34] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 02:21:34] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 02:21:34] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 02:21:34] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 02:21:34] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 02:21:34] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 02:21:34] [INFO] iNFT Token ID:    0
+[2026-05-03 02:21:34] [INFO] Poll interval:    5000ms
+[2026-05-03 02:21:34] [INFO] MCP enabled:      false
+[2026-05-03 02:21:34] [INFO] x402 enabled:     false
+[2026-05-03 02:21:34] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 02:21:34] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com/wfb_rYbEd2Uk1TKZx2Aw2LrZ504_STT6u4kN
+[2026-05-03 02:21:34] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 02:21:34] [INFO] Coordinator: yieldEmitter listener attached
+[2026-05-03 02:21:34] [WARN] Coordinator: riskAgent not available yet — skipping: Unexpected identifier 'computeClient'
+[2026-05-03 02:21:34] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 02:21:36] [INFO] Coordinator: proposal received — executionId: 0x09c2696ecd005b... priority: 2 queue size: 1
+[2026-05-03 02:21:39] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x09c2696ecd005b...
+[2026-05-03 02:21:42] [DEBUG] [0x09c2696ecd005b] Attempt 1/3
+[2026-05-03 02:21:42] [INFO] Coordinator: executing proposal 0x09c2696ecd005b... type: YIELD
+[2026-05-03 02:21:42] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:21:42] [DEBUG] KeeperHubRestClient: POST /v1/workflows — name: sentinel-yield-0x09c269
+[2026-05-03 02:21:43] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:21:43] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777755103151
+[2026-05-03 02:21:43] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:21:43] [DEBUG] KeeperHubRestClient: POST /v1/workflows/fallback-wf-1777755103151/execute
+[2026-05-03 02:21:43] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:21:44] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x09c2696ecd005b...
+[2026-05-03 02:21:45] [DEBUG] [0x09c2696ecd005b] Attempt 1/3
+[2026-05-03 02:21:45] [INFO] Coordinator: executing proposal 0x09c2696ecd005b... type: YIELD
+[2026-05-03 02:21:45] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:21:45] [DEBUG] KeeperHubRestClient: POST /v1/workflows — name: sentinel-yield-0x09c269
+[2026-05-03 02:21:45] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:21:45] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777755105563
+[2026-05-03 02:21:45] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:21:45] [DEBUG] KeeperHubRestClient: POST /v1/workflows/fallback-wf-1777755105563/execute
+[2026-05-03 02:21:45] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:21:47] [ERROR] Coordinator: consumeProof failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7b09c2696ecd005bb1eede62ee15c7a49ad89c9c9af92a36b1964ed8430a84d134", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 02:21:49] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x09c2696ecd005b...
+[2026-05-03 02:21:54] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x09c2696ecd005b...
+[2026-05-03 02:21:55] [WARN] Coordinator: no valid proof for executionId 0x09c2696ecd005b..., skipping
+[2026-05-03 02:21:59] [DEBUG] Coordinator: Queue empty, waiting...
+[2026-05-03 02:22:00] [INFO] Coordinator: consumeProof confirmed — executionId: 0x09c2696ecd005b...
+[2026-05-03 02:22:00] [INFO] Coordinator: incrementExperience confirmed — tokenId: 0
+[2026-05-03 02:22:00] [INFO] Coordinator: proposal executed successfully — type: YIELD result: {"status":"api_unavailable","workflowId":"fallback-wf-1777755105563","error":"KeeperHubRestClient.triggerExecution faile
+[2026-05-03 02:22:00] [WARN] Coordinator: no valid proof for executionId 0x09c2696ecd005b..., skipping
+[2026-05-03 02:22:04] [DEBUG] Coordinator: Queue empty, waiting...
+[2026-05-03 02:22:07] [INFO] Coordinator: proposal received — executionId: 0x1b887d38213ce5... priority: 2 queue size: 1
+[2026-05-03 02:23:59] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 02:23:59] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 02:23:59] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 02:23:59] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 02:23:59] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 02:23:59] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 02:23:59] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 02:23:59] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 02:23:59] [INFO] iNFT Token ID:    0
+[2026-05-03 02:23:59] [INFO] Poll interval:    5000ms
+[2026-05-03 02:23:59] [INFO] MCP enabled:      false
+[2026-05-03 02:23:59] [INFO] x402 enabled:     false
+[2026-05-03 02:23:59] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 02:23:59] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com/wfb_rYbEd2Uk1TKZx2Aw2LrZ504_STT6u4kN
+[2026-05-03 02:23:59] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 02:23:59] [INFO] Coordinator: yieldEmitter listener attached
+[2026-05-03 02:23:59] [WARN] Coordinator: riskAgent not available yet — skipping: Unexpected identifier 'computeClient'
+[2026-05-03 02:23:59] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 02:24:01] [INFO] Coordinator: proposal received — executionId: 0x0fc035e86dbef9... priority: 2 queue size: 1
+[2026-05-03 02:24:04] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x0fc035e86dbef9...
+[2026-05-03 02:24:05] [DEBUG] [0x0fc035e86dbef9] Attempt 1/3
+[2026-05-03 02:24:05] [INFO] Coordinator: executing proposal 0x0fc035e86dbef9... type: YIELD
+[2026-05-03 02:24:05] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:24:05] [DEBUG] KeeperHubRestClient: POST /v1/workflows — name: sentinel-yield-0x0fc035
+[2026-05-03 02:24:06] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:24:06] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777755246053
+[2026-05-03 02:24:06] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 02:24:06] [DEBUG] KeeperHubRestClient: POST /v1/workflows/fallback-wf-1777755246053/execute
+[2026-05-03 02:24:06] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 02:24:09] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x0fc035e86dbef9...
+[2026-05-03 02:24:14] [INFO] Coordinator: processing proposal — type: YIELD priority: 2 executionId: 0x0fc035e86dbef9...
+[2026-05-03 02:24:15] [WARN] Coordinator: no valid proof for executionId 0x0fc035e86dbef9..., skipping
+[2026-05-03 02:24:18] [INFO] Coordinator: consumeProof confirmed — executionId: 0x0fc035e86dbef9...
+[2026-05-03 02:24:19] [DEBUG] Coordinator: Queue empty, waiting...
+[2026-05-03 02:24:20] [WARN] Coordinator: no valid proof for executionId 0x0fc035e86dbef9..., skipping
+[2026-05-03 02:24:24] [DEBUG] Coordinator: Queue empty, waiting...
+[2026-05-03 02:24:28] [INFO] Coordinator: incrementExperience confirmed — tokenId: 0
+[2026-05-03 02:24:28] [INFO] Coordinator: proposal executed successfully — type: YIELD result: {"status":"api_unavailable","workflowId":"fallback-wf-1777755246053","error":"KeeperHubRestClient.triggerExecution faile
+[2026-05-03 02:24:29] [DEBUG] Coordinator: Queue empty, waiting...

@@ -59,6 +59,7 @@ try {
 
 const rpcFailover     = new RpcFailover(rpcEndpoints);
 const queue           = new ProposalQueue();
+const processedExecutionIds = new Set();
 
 let wallet;
 let inferenceGuard;
@@ -340,6 +341,14 @@ async function processCycle() {
     `executionId: ${proposal.executionId ? proposal.executionId.slice(0, 16) + '...' : 'N/A'}`
   );
 
+  if (proposal.executionId && processedExecutionIds.has(proposal.executionId)) {
+    logger.info(
+      `Coordinator: Skipping already processed executionId ${proposal.executionId.slice(0, 16)}...`
+    );
+    queue.pop();
+    return;
+  }
+
   // Check if this proposal should be executed
   if (!shouldExecute(proposal)) {
     queue.pop();
@@ -364,6 +373,9 @@ async function processCycle() {
       () => executeProposal(proposal),
       { maxAttempts: 3, baseDelayMs: 1000, label: proposal.executionId ? proposal.executionId.slice(0, 16) : 'proposal' }
     );
+    if (proposal.executionId) {
+      processedExecutionIds.add(proposal.executionId);
+    }
     queue.pop();
     logger.info(
       `Coordinator: proposal executed successfully — type: ${proposal.agentType} ` +
