@@ -8,7 +8,7 @@ const path                = require('path');
 
 const logger              = require('../../utils/logger');
 const rpcEndpoints        = require('../../config/rpcEndpoints');
-const RpcFailover         = require('../../keeperhub/rpcFailover');
+const RpcFailover         = require('../../keeperhub/rpcFallover.js');
 const { withRetry }       = require('../../keeperhub/retryHandler');
 const X402Payment         = require('../../keeperhub/x402Payment');
 const KeeperHubClient     = require('../../keeperhub/client');
@@ -96,7 +96,7 @@ function initContracts() {
 
 function attachYieldAgent() {
   try {
-    const { yieldEmitter } = require('../yieldAgent');
+    const { yieldEmitter } = require('../../yieldAgent.js');
     yieldEmitter.on('proposal', (rawProposal) => {
       try {
         const priority = classifyProposal(rawProposal);
@@ -118,7 +118,7 @@ function attachYieldAgent() {
 
 function attachRiskAgent() {
   try {
-    const { riskEmitter } = require('../riskAgent');
+    const { riskEmitter } = require('../../og-integration/src/agents/risk-agent.ts');
     riskEmitter.on('proposal', (rawProposal) => {
       try {
         const priority = classifyProposal(rawProposal);
