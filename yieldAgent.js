@@ -7,6 +7,7 @@ const fs = require("fs");
 const RPC_URL          = process.env.RPC_URL || "https://evmrpc-testnet.0g.ai";
 const PRIVATE_KEY      = process.env.PRIVATE_KEY;
 const POLL_INTERVAL_MS = parseInt(process.env.YIELD_POLL_MS || "15000");
+const PROPOSAL_COOLDOWN_MS = parseInt(process.env.YIELD_PROPOSAL_COOLDOWN_MS || "30000");
 
 let addresses;
 try {
@@ -32,6 +33,7 @@ const Protocol = { SPARK: 0, AAVE: 1, UNISWAP_V3: 2, OTHER: 3 };
 
 const yieldEmitter = new EventEmitter();
 const proposals    = [];
+const lastProposalAt = new Map();
 
 let cycleCount = 0;
 
@@ -132,7 +134,14 @@ async function checkPosition(provider, pos, posId) {
     console.log(`│  Tick:     ${currentTick}  →  ${inRange ? "IN RANGE (earning fees)" : `OUT OF RANGE by ${distanceFromRange} ticks`}`);
 
     if (!inRange) {
+      const lastEmittedAt = lastProposalAt.get(posId) || 0;
+      if (Date.now() - lastEmittedAt < PROPOSAL_COOLDOWN_MS) {
+        console.log(`│  Proposal cooldown active for ${shortId} (${Math.ceil((PROPOSAL_COOLDOWN_MS - (Date.now() - lastEmittedAt)) / 1000)}s remaining)`);
+        return;
+      }
+
       const proposal = buildProposal(posId, poolAddress, poolLabel, currentTick, tickLower, tickUpper, distanceFromRange);
+      lastProposalAt.set(posId, Date.now());
       proposals.push(proposal);
 
       console.log(`│`);
@@ -142,6 +151,7 @@ async function checkPosition(provider, pos, posId) {
       console.log(`│     Reasoning: ${proposal.reasoning}`);
       console.log(`│     New range: [${proposal.suggestedRange.tickLower}, ${proposal.suggestedRange.tickUpper}]`);
       console.log(`│     ExecID:    ${proposal.executionId.slice(0, 20)}...`);
+      console.log(`│     Status:    proposal emitted`);
 
       yieldEmitter.emit("proposal", proposal);
     }

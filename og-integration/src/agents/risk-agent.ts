@@ -7,7 +7,7 @@ import { Position, RiskAnalysis, Decision, ComputeRequest } from "../types";
 import { ComputeClient } from "../services/compute";
 import { logger } from "../utils/logger";
 
-export class RiskAgent {
+export  class RiskAgent {
   private computeClient: ComputeClient;
   private agentId: string;
 
