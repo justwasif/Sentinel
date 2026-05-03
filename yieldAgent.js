@@ -107,7 +107,9 @@ async function runCycle(provider, registry, monitoredUser) {
 async function checkPosition(provider, pos, posId) {
   const poolAddress = pos.positionAddress;
   const tickLower   = Number(pos.tickLower);
+  // const tickLower="100";
   const tickUpper   = Number(pos.tickUpper);
+  //  const tickUpper   = "200";
   const shortId     = posId.slice(0, 10) + "...";
 
   try {

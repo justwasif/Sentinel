@@ -9,12 +9,12 @@ import { ComputeRequest, ComputeResponse, TEEVerification } from "../types";
 import { logger } from "../utils/logger";
 
 export class ComputeError extends Error {
-  constructor(
-    message: string,
-    public details?: any
-  ) {
+  public details?: any;
+
+  constructor(message: string, details?: any) {
     super(message);
     this.name = "ComputeError";
+    this.details = details;
   }
 }
 

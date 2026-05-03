@@ -6,6 +6,9 @@
 import { Position, RiskAnalysis, Decision, ComputeRequest } from "../types";
 import { ComputeClient } from "../services/compute";
 import { logger } from "../utils/logger";
+import { EventEmitter } from 'events';
+
+export const riskEmitter = new EventEmitter();
 
 export  class RiskAgent {
   private computeClient: ComputeClient;
@@ -167,6 +170,15 @@ export  class RiskAgent {
     };
 
     logger.info(`Decision: ${action} (${reason})`);
+    logger.info(`RiskAgent: emitting proposal — action: ${action}`);
+    riskEmitter.emit('proposal', {
+      agentId: 'risk',
+      action,
+      reasoning: reason,
+      confidence: analysis.confidence,
+      timestamp: Date.now()
+    });
+
     return decision;
   }
 

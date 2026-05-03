@@ -25,7 +25,7 @@
 // const logger        = require('./utils/logger');
 // const addresses     = JSON.parse(fs.readFileSync('./deployed-addresses.json', 'utf8'));
 
-// const INFERENCE_GUARD_ABI = [
+// // const INFERENCE_GUARD_ABI = [
 //   'function submitProof(bytes32 executionId, bytes32 rootHash) external',
 // ];
 

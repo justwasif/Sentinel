@@ -132,8 +132,8 @@ function attachYieldAgent() {
 }
 
 function attachRiskAgent() {
-  try {
-    const { riskEmitter } = require('../riskAgent');
+try {
+  const { riskEmitter } = require('../../og-integration/dist/agents/risk-agent');
     riskEmitter.on('proposal', (rawProposal) => {
       try {
         const priority = classifyProposal(rawProposal);
@@ -462,4 +462,34 @@ module.exports = { main, runCoordinator, processCycle };
 
 if (require.main === module) {
   main();
+
+  // Mock trigger for testing
+  setTimeout(async () => {
+    try {
+      const { RiskAgent } = require('../../og-integration/dist/agents/risk-agent');
+      const { ComputeClient } = require('../../og-integration/dist/services/compute');
+
+      const computeClient = new ComputeClient(
+        process.env.COMPUTE_API_KEY || "mock-key",
+        process.env.COMPUTE_RPC_URL || "https://api.0g.ai",
+        true
+      );
+      const riskAgent = new RiskAgent(computeClient, "risk-agent");
+
+      const mockPosition = {
+        protocol: "Aave",
+        healthFactor: 1.2,
+        collateralAmount: 100,
+        debtAmount: 50,
+        underlyingAsset: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", // WETH
+        collateralAsset: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+      };
+
+      logger.info("RiskAgent: triggering analysis...");
+      const analysis = await riskAgent.analyzeRisk(mockPosition);
+      logger.info(`Risk analysis result: ${analysis.riskLevel}`);
+    } catch (err) {
+      logger.error(`Failed to trigger riskAgent: ${err.message}`);
+    }
+  }, 5000);
 }

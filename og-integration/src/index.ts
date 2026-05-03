@@ -23,7 +23,7 @@ async function main() {
   try {
     // Initialize clients
     const computeClient = new ComputeClient(
-      process.env.API_KEY || "sk-mock-key",
+      process.env.API_KEY || "app-sk-eyJhZGRyZXNzIjoiMHg1YUQzRWNBNjVGYmE2OWVGYUM3MTZkNzkyQWJFMTkwNDE2MmYxQjEwIiwicHJvdmlkZXIiOiIweGE0OGYwMTI4NzIzMzUwOUZENjk0YTIyQmY4NDAyMjUwNjJFNjc4MzYiLCJ0aW1lc3RhbXAiOjE3Nzc4MTE2NTc0MTEsImV4cGlyZXNBdCI6MCwibm9uY2UiOiIxNzc3ODExNjU3NDExLXcybnFiNDFvdjNpMDAwMDAwMCIsImdlbmVyYXRpb24iOjAsInRva2VuSWQiOjB9fDB4ZDkxMDc5ZmE1ZTdkNjE2MWQzMjI2ZmNkYWU0N2RiZGM1NmRlZGFkYzY4OTRjMjNkZGZlOTlhZGE1Nzk5NjFmODY0NmE4MzdjMTcwYTZkMjRiYWQxYzMyMGRiMTdiZTMwNTc5M2VhMWFiZWQxYWQzOGE1ZjExZjI4YThmNGIzZTYxYg==",
       process.env.RPC_URL || "https://evmrpc.0g.ai",
       true // Use mock for now
     );

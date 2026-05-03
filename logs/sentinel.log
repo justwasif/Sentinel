@@ -1005,3 +1005,534 @@ Require stack:
 [2026-05-03 06:09:44] [DEBUG] [0xf2511a6181d146...] Attempt 1/3
 [2026-05-03 06:09:44] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0xf2511a6181d146...
 [2026-05-03 06:09:44] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 08:59:48] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 08:59:48] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 08:59:48] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 08:59:48] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 08:59:48] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 08:59:48] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 08:59:48] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 08:59:48] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 08:59:48] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 08:59:48] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 08:59:48] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 08:59:48] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 08:59:48] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 08:59:48] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 08:59:48] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 08:59:48] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 08:59:48] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 08:59:48] [INFO] iNFT Token ID:    0
+[2026-05-03 08:59:48] [INFO] Poll interval:    5000ms
+[2026-05-03 08:59:48] [INFO] MCP enabled:      false
+[2026-05-03 08:59:48] [INFO] x402 enabled:     true
+[2026-05-03 08:59:48] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 08:59:48] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 08:59:48] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 08:59:48] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 08:59:48] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 08:59:48] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 08:59:48] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 08:59:48] [INFO] Poll interval:    20s
+[2026-05-03 08:59:48] [INFO] Proposal cooldown:60s
+[2026-05-03 08:59:48] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 08:59:48] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 08:59:50] [INFO] NonceManager: initialised — starting nonce 1049
+[2026-05-03 08:59:50] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 08:59:50] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 08:59:50] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 08:59:50] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 08:59:52] [INFO] Coordinator: YIELD proposal — executionId: 0x313b4330635872... priority: 2 queue: 1
+[2026-05-03 08:59:52] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 08:59:56] [DEBUG] NonceManager: sending tx nonce 1049 (attempt 1/3)
+[2026-05-03 09:20:32] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 09:20:32] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 09:20:32] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 09:20:32] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 09:20:32] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 09:20:32] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 09:20:32] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 09:20:32] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 09:20:32] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 09:20:32] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 09:20:32] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 09:20:32] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 09:20:32] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 09:20:32] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 09:20:32] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 09:20:32] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 09:20:32] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 09:20:32] [INFO] iNFT Token ID:    0
+[2026-05-03 09:20:32] [INFO] Poll interval:    5000ms
+[2026-05-03 09:20:32] [INFO] MCP enabled:      false
+[2026-05-03 09:20:32] [INFO] x402 enabled:     true
+[2026-05-03 09:20:32] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 09:20:33] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 09:20:33] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 09:20:33] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 09:20:33] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 09:20:33] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 09:20:33] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 09:20:33] [INFO] Poll interval:    20s
+[2026-05-03 09:20:33] [INFO] Proposal cooldown:60s
+[2026-05-03 09:20:33] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 09:20:33] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 09:20:34] [INFO] NonceManager: initialised — starting nonce 1049
+[2026-05-03 09:20:34] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 09:20:34] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 09:20:34] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 09:20:34] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 09:20:36] [INFO] Coordinator: YIELD proposal — executionId: 0x16944425e6dd28... priority: 2 queue: 1
+[2026-05-03 09:20:36] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 09:20:40] [DEBUG] NonceManager: sending tx nonce 1049 (attempt 1/3)
+[2026-05-03 16:57:09] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 16:57:09] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:57:09] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 16:57:09] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:57:09] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 16:57:09] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 16:57:09] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 16:57:09] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 16:57:09] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:57:09] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:57:09] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 16:57:09] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:57:09] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 16:57:09] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 16:57:09] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 16:57:09] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 16:57:09] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 16:57:09] [INFO] iNFT Token ID:    0
+[2026-05-03 16:57:09] [INFO] Poll interval:    5000ms
+[2026-05-03 16:57:09] [INFO] MCP enabled:      false
+[2026-05-03 16:57:09] [INFO] x402 enabled:     true
+[2026-05-03 16:57:09] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:57:10] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 16:57:10] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:57:10] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 16:57:10] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:57:10] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 16:57:10] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 16:57:10] [INFO] Poll interval:    20s
+[2026-05-03 16:57:10] [INFO] Proposal cooldown:60s
+[2026-05-03 16:57:10] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:57:10] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 16:57:12] [INFO] NonceManager: initialised — starting nonce 1058
+[2026-05-03 16:57:12] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 16:57:12] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 16:57:12] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 16:57:12] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 16:57:13] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 16:57:17] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:22] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:27] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:32] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:32] [INFO] 
+[RiskAgent] ── Cycle #2 ──
+[2026-05-03 16:57:37] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:42] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:47] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:52] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:57:52] [INFO] 
+[RiskAgent] ── Cycle #3 ──
+[2026-05-03 16:57:57] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:58:02] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:58:07] [DEBUG] Coordinator: queue empty
+[2026-05-03 16:59:52] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 16:59:52] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:59:52] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 16:59:52] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:59:52] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 16:59:52] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 16:59:52] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 16:59:52] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 16:59:52] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:59:52] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:59:52] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 16:59:52] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:59:52] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 16:59:52] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 16:59:52] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 16:59:52] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 16:59:52] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 16:59:52] [INFO] iNFT Token ID:    0
+[2026-05-03 16:59:52] [INFO] Poll interval:    5000ms
+[2026-05-03 16:59:52] [INFO] MCP enabled:      false
+[2026-05-03 16:59:52] [INFO] x402 enabled:     true
+[2026-05-03 16:59:52] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:59:52] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 16:59:52] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 16:59:52] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 16:59:52] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 16:59:52] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 16:59:52] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 16:59:52] [INFO] Poll interval:    20s
+[2026-05-03 16:59:52] [INFO] Proposal cooldown:60s
+[2026-05-03 16:59:52] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 16:59:52] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 16:59:54] [INFO] NonceManager: initialised — starting nonce 1058
+[2026-05-03 16:59:54] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 16:59:54] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 16:59:54] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 16:59:54] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 16:59:55] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 16:59:59] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:04] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:09] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:14] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:14] [INFO] 
+[RiskAgent] ── Cycle #2 ──
+[2026-05-03 17:00:19] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:24] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:00:29] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:24] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 17:05:24] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:05:24] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 17:05:24] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:05:24] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:05:24] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:05:24] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:05:24] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:05:24] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:05:24] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:05:24] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 17:05:24] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:05:24] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 17:05:24] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 17:05:24] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:05:24] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:05:24] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:05:24] [INFO] iNFT Token ID:    0
+[2026-05-03 17:05:24] [INFO] Poll interval:    5000ms
+[2026-05-03 17:05:24] [INFO] MCP enabled:      false
+[2026-05-03 17:05:24] [INFO] x402 enabled:     true
+[2026-05-03 17:05:24] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:05:25] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 17:05:25] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:05:25] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 17:05:25] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:05:25] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:05:25] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:05:25] [INFO] Poll interval:    20s
+[2026-05-03 17:05:25] [INFO] Proposal cooldown:60s
+[2026-05-03 17:05:25] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:05:25] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 17:05:27] [INFO] NonceManager: initialised — starting nonce 1058
+[2026-05-03 17:05:27] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:05:27] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 17:05:27] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 17:05:27] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 17:05:28] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 17:05:32] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:37] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:42] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:47] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:47] [INFO] 
+[RiskAgent] ── Cycle #2 ──
+[2026-05-03 17:05:52] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:05:57] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:06:02] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:06:07] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:06:07] [INFO] 
+[RiskAgent] ── Cycle #3 ──
+[2026-05-03 17:06:12] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:10:19] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 17:10:19] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:10:19] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 17:10:19] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:10:19] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:10:19] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:10:19] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:10:19] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:10:19] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:10:19] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:10:19] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 17:10:19] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:10:19] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 17:10:19] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 17:10:19] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:10:19] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:10:19] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:10:19] [INFO] iNFT Token ID:    0
+[2026-05-03 17:10:19] [INFO] Poll interval:    5000ms
+[2026-05-03 17:10:19] [INFO] MCP enabled:      false
+[2026-05-03 17:10:19] [INFO] x402 enabled:     true
+[2026-05-03 17:10:19] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:10:20] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 17:10:20] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:10:20] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 17:10:20] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:10:20] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:10:20] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:10:20] [INFO] Poll interval:    20s
+[2026-05-03 17:10:20] [INFO] Proposal cooldown:60s
+[2026-05-03 17:10:20] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:10:20] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 17:10:21] [INFO] NonceManager: initialised — starting nonce 1058
+[2026-05-03 17:10:21] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:10:21] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 17:10:21] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 17:10:21] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 17:10:23] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 17:13:43] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 17:13:43] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:13:43] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 17:13:43] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:13:43] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:13:43] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:13:43] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:13:43] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:13:43] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:13:43] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:13:43] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 17:13:43] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:13:43] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 17:13:43] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 17:13:43] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:13:43] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:13:43] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:13:43] [INFO] iNFT Token ID:    0
+[2026-05-03 17:13:43] [INFO] Poll interval:    5000ms
+[2026-05-03 17:13:43] [INFO] MCP enabled:      false
+[2026-05-03 17:13:43] [INFO] x402 enabled:     true
+[2026-05-03 17:13:43] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:13:43] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 17:13:43] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:13:43] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 17:13:43] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:13:43] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:13:43] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:13:43] [INFO] Poll interval:    20s
+[2026-05-03 17:13:43] [INFO] Proposal cooldown:60s
+[2026-05-03 17:13:43] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:13:43] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 17:13:45] [INFO] NonceManager: initialised — starting nonce 1058
+[2026-05-03 17:13:45] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:13:45] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 17:13:45] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 17:13:45] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 17:13:46] [INFO] Coordinator: YIELD proposal — executionId: 0x4545ceb1fa79a3... priority: 2 queue: 1
+[2026-05-03 17:13:46] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 17:13:51] [DEBUG] NonceManager: sending tx nonce 1058 (attempt 1/3)
+[2026-05-03 17:13:56] [INFO] Coordinator: proof already valid for 0x4545ceb1fa79a3... — skipping submit
+[2026-05-03 17:13:56] [DEBUG] [0x4545ceb1fa79a3...] Attempt 1/3
+[2026-05-03 17:13:56] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0x4545ceb1fa79a3...
+[2026-05-03 17:13:56] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 17:13:56] [DEBUG] X402Payment: current allowance for 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be: 1
+[2026-05-03 17:15:28] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 17:15:28] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:15:28] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 17:15:28] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:15:28] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:15:28] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:15:28] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:15:28] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:15:28] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:15:28] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:15:28] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 17:15:28] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:15:28] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 17:15:28] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 17:15:28] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:15:28] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:15:28] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:15:28] [INFO] iNFT Token ID:    0
+[2026-05-03 17:15:28] [INFO] Poll interval:    5000ms
+[2026-05-03 17:15:28] [INFO] MCP enabled:      false
+[2026-05-03 17:15:28] [INFO] x402 enabled:     true
+[2026-05-03 17:15:28] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:15:28] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 17:15:28] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:15:28] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 17:15:28] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:15:28] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:15:28] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:15:28] [INFO] Poll interval:    20s
+[2026-05-03 17:15:28] [INFO] Proposal cooldown:60s
+[2026-05-03 17:15:28] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:15:28] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 17:15:30] [INFO] NonceManager: initialised — starting nonce 1059
+[2026-05-03 17:15:30] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:15:30] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 17:15:30] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 17:15:30] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 17:15:31] [INFO] Coordinator: YIELD proposal — executionId: 0xb27e32c51612e1... priority: 2 queue: 1
+[2026-05-03 17:15:31] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 17:15:35] [DEBUG] NonceManager: sending tx nonce 1059 (attempt 1/3)
+[2026-05-03 17:15:40] [INFO] Coordinator: proof already valid for 0xb27e32c51612e1... — skipping submit
+[2026-05-03 17:15:41] [DEBUG] [0xb27e32c51612e1...] Attempt 1/3
+[2026-05-03 17:15:41] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0xb27e32c51612e1...
+[2026-05-03 17:15:41] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 17:15:41] [DEBUG] X402Payment: current allowance for 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be: 1
+[2026-05-03 17:15:43] [INFO] X402Payment: approve tx submitted: 0x62dd0c4920a64b39c493af8bb96bc5b5c68549b7c1ad5a7e0f21bac30674c80b
+[2026-05-03 17:15:45] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:15:48] [DEBUG] NonceManager: confirmed — hash 0xd258367fe8a7f75094f68efbd5f2bf7893ff919f3a5b476ba5877c03195273e7 nonce 1059
+[2026-05-03 17:15:48] [INFO] Coordinator: proof submitted — executionId: 0xb27e32c51612e1...
+[2026-05-03 17:15:49] [DEBUG] [0xb27e32c51612e1...] Attempt 1/3
+[2026-05-03 17:15:49] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0xb27e32c51612e1...
+[2026-05-03 17:15:49] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 17:15:49] [DEBUG] X402Payment: current allowance for 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be: 1
+[2026-05-03 17:15:50] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:15:50] [INFO] 
+[RiskAgent] ── Cycle #2 ──
+[2026-05-03 17:15:51] [INFO] X402Payment: approve tx submitted: 0x22786c878bdb7808c9fb13f401f4168a09107cfceaa80da6ca572ba336b1553d
+[2026-05-03 17:15:53] [INFO] X402Payment: approve confirmed in block 31290428
+[2026-05-03 17:15:53] [INFO] Coordinator: x402 payment approved for 0xb27e32c51612e1...
+[2026-05-03 17:15:53] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 17:15:53] [DEBUG] KeeperHubRestClient: POST /api/workflows — name: sentinel-yield-0xb27e32
+[2026-05-03 17:15:54] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 405]: ""
+[2026-05-03 17:15:54] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777808754918
+[2026-05-03 17:15:54] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 17:15:54] [DEBUG] KeeperHubRestClient: POST /api/workflows/fallback-wf-1777808754918/execute
+[2026-05-03 17:15:55] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 17:15:55] [DEBUG] NonceManager: sending tx nonce 1060 (attempt 1/3)
+[2026-05-03 17:15:55] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:17:08] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 17:17:08] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:17:08] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 17:17:08] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:17:08] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:17:08] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:17:08] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:17:08] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:17:08] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:17:08] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:17:08] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 17:17:08] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:17:08] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 17:17:08] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 17:17:08] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 17:17:08] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 17:17:08] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 17:17:08] [INFO] iNFT Token ID:    0
+[2026-05-03 17:17:08] [INFO] Poll interval:    5000ms
+[2026-05-03 17:17:08] [INFO] MCP enabled:      false
+[2026-05-03 17:17:08] [INFO] x402 enabled:     true
+[2026-05-03 17:17:08] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:17:08] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 17:17:08] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 17:17:08] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 17:17:08] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 17:17:08] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:17:08] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 17:17:08] [INFO] Poll interval:    20s
+[2026-05-03 17:17:08] [INFO] Proposal cooldown:60s
+[2026-05-03 17:17:08] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 17:17:08] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 17:17:09] [INFO] NonceManager: initialised — starting nonce 1062
+[2026-05-03 17:17:09] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 17:17:09] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 17:17:10] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 17:17:10] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 17:17:10] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 17:17:15] [DEBUG] Coordinator: queue empty
+[2026-05-03 17:17:20] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:06:49] [DEBUG] RpcFailover initialized with 2 endpoint(s). Primary: https://evmrpc-testnet.0g.ai
+[2026-05-03 18:06:49] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 18:06:49] [INFO] ║         SENTINEL — FULL SYSTEM STARTING         ║
+[2026-05-03 18:06:49] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 18:06:49] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 18:06:49] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 18:06:49] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 18:06:49] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 18:06:49] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 18:06:49] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 18:06:49] [INFO] ║       SENTINEL — COORDINATOR AGENT STARTED      ║
+[2026-05-03 18:06:49] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 18:06:49] [INFO] Network:          0G Galileo (chainId 16602)
+[2026-05-03 18:06:49] [INFO] RPC endpoints:    https://evmrpc-testnet.0g.ai, https://rpc-testnet.0g.ai
+[2026-05-03 18:06:49] [INFO] InferenceGuard:   0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5
+[2026-05-03 18:06:49] [INFO] SentinelINFT:     0x1A686bb2b8453A543ECA148bDbdE4155EB56a7B1
+[2026-05-03 18:06:49] [INFO] MockUSDC:         0x7c0B4F303f03dA90fE9790cf328B03414b71DF69
+[2026-05-03 18:06:49] [INFO] iNFT Token ID:    0
+[2026-05-03 18:06:49] [INFO] Poll interval:    5000ms
+[2026-05-03 18:06:49] [INFO] MCP enabled:      false
+[2026-05-03 18:06:49] [INFO] x402 enabled:     true
+[2026-05-03 18:06:49] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 18:06:49] [DEBUG] KeeperHubClient initialized — MCP: disabled, REST base: https://app.keeperhub.com
+[2026-05-03 18:06:50] [INFO] ╔══════════════════════════════════════════════════╗
+[2026-05-03 18:06:50] [INFO] ║          SENTINEL — RISK AGENT STARTED          ║
+[2026-05-03 18:06:50] [INFO] ╚══════════════════════════════════════════════════╝
+[2026-05-03 18:06:50] [INFO] Wallet:           0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 18:06:50] [INFO] PositionRegistry: 0x22D6e5c83b1fE929F6572b84C4dBA63e6607aE2A
+[2026-05-03 18:06:50] [INFO] Poll interval:    20s
+[2026-05-03 18:06:50] [INFO] Proposal cooldown:60s
+[2026-05-03 18:06:50] [INFO] ──────────────────────────────────────────────────
+[2026-05-03 18:06:50] [INFO] 
+[RiskAgent] ── Cycle #1 ──
+[2026-05-03 18:06:53] [INFO] NonceManager: initialised — starting nonce 1066
+[2026-05-03 18:06:53] [INFO] Coordinator wallet: 0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10
+[2026-05-03 18:06:53] [INFO] Coordinator: yieldEmitter attached
+[2026-05-03 18:06:53] [INFO] Coordinator: riskEmitter attached
+[2026-05-03 18:06:53] [INFO] Coordinator: starting main loop — polling every 5000ms
+[2026-05-03 18:06:54] [INFO] Coordinator: YIELD proposal — executionId: 0xf4462c92025cef... priority: 2 queue: 1
+[2026-05-03 18:06:54] [INFO] ✅ Coordinator + Yield Agent + Risk Agent running
+[2026-05-03 18:06:58] [DEBUG] NonceManager: sending tx nonce 1066 (attempt 1/3)
+[2026-05-03 18:07:03] [INFO] Coordinator: proof already valid for 0xf4462c92025cef... — skipping submit
+[2026-05-03 18:07:03] [DEBUG] [0xf4462c92025cef...] Attempt 1/3
+[2026-05-03 18:07:03] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0xf4462c92025cef...
+[2026-05-03 18:07:03] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 18:07:04] [DEBUG] X402Payment: current allowance for 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be: 1
+[2026-05-03 18:07:06] [INFO] X402Payment: approve tx submitted: 0x097d2cec8840f00630bad5bc164172797a74fd34d97c6ccca317a2b71919bdb3
+[2026-05-03 18:07:08] [DEBUG] NonceManager: confirmed — hash 0x57496f9051a069b27e0c7e4d9b624176c22a6039fc91ea60683125f18857c31b nonce 1066
+[2026-05-03 18:07:08] [INFO] Coordinator: proof submitted — executionId: 0xf4462c92025cef...
+[2026-05-03 18:07:08] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:08] [DEBUG] [0xf4462c92025cef...] Attempt 1/3
+[2026-05-03 18:07:08] [INFO] Coordinator: processing — type: YIELD priority: 2 executionId: 0xf4462c92025cef...
+[2026-05-03 18:07:08] [INFO] X402Payment: approving 1 USDC to 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be via x402
+[2026-05-03 18:07:08] [DEBUG] X402Payment: current allowance for 0xAa676ad3c4502A656FfCB678259c90FaB5E9f9Be: 1
+[2026-05-03 18:07:11] [INFO] X402Payment: approve tx submitted: 0xe3887a3fa74819621c08e7c497403bdcea1792f10f7f43f0145b86bfda0f63cd
+[2026-05-03 18:07:13] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:13] [INFO] 
+[RiskAgent] ── Cycle #2 ──
+[2026-05-03 18:07:18] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:21] [INFO] X402Payment: approve confirmed in block 31297585
+[2026-05-03 18:07:21] [INFO] X402Payment: approve confirmed in block 31297596
+[2026-05-03 18:07:21] [INFO] Coordinator: x402 payment approved for 0xf4462c92025cef...
+[2026-05-03 18:07:21] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 18:07:21] [INFO] Coordinator: x402 payment approved for 0xf4462c92025cef...
+[2026-05-03 18:07:21] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 18:07:21] [DEBUG] KeeperHubRestClient: POST /api/workflows — name: sentinel-yield-0xf4462c
+[2026-05-03 18:07:21] [DEBUG] KeeperHubRestClient: POST /api/workflows — name: sentinel-yield-0xf4462c
+[2026-05-03 18:07:22] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 405]: ""
+[2026-05-03 18:07:22] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777811842778
+[2026-05-03 18:07:22] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 18:07:22] [DEBUG] KeeperHubRestClient: POST /api/workflows/fallback-wf-1777811842778/execute
+[2026-05-03 18:07:23] [ERROR] Coordinator: createWorkflow failed: KeeperHubRestClient.createWorkflow failed [HTTP 405]: ""
+[2026-05-03 18:07:23] [WARN] Coordinator: using fallback workflowId: fallback-wf-1777811843084
+[2026-05-03 18:07:23] [DEBUG] KeeperHubClient: using REST client
+[2026-05-03 18:07:23] [DEBUG] KeeperHubRestClient: POST /api/workflows/fallback-wf-1777811843084/execute
+[2026-05-03 18:07:23] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:23] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 18:07:23] [DEBUG] NonceManager: sending tx nonce 1067 (attempt 1/3)
+[2026-05-03 18:07:24] [ERROR] Coordinator: triggerExecution failed: KeeperHubRestClient.triggerExecution failed [HTTP 404]: "<!DOCTYPE html><html lang=\"en\" style=\"--nav-sidebar-width:200px\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalab
+[2026-05-03 18:07:25] [WARN] NonceManager: nonce 1067 stale (attempt 1/3) — resyncing and retrying
+[2026-05-03 18:07:25] [WARN] NonceManager: reset — nonce is now 1069
+[2026-05-03 18:07:25] [DEBUG] NonceManager: sending tx nonce 1069 (attempt 2/3)
+[2026-05-03 18:07:26] [INFO] Coordinator: YIELD proposal — executionId: 0xb825b5f43e096e... priority: 2 queue: 1
+[2026-05-03 18:07:33] [INFO] 
+[RiskAgent] ── Cycle #3 ──
+[2026-05-03 18:07:37] [DEBUG] NonceManager: confirmed — hash 0x5d138eee90d4361fb08bf301ed536e0286a059ab56ab663d250d249eea25a300 nonce 1069
+[2026-05-03 18:07:37] [DEBUG] NonceManager: sending tx nonce 1070 (attempt 1/3)
+[2026-05-03 18:07:37] [INFO] Coordinator: consumeProof confirmed — 0xf4462c92025cef...
+[2026-05-03 18:07:38] [ERROR] Coordinator: consumeProof failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7bf4462c92025cefdb131bcac61885d9be132a0015d5c714d6a0563fc47edb5a46", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 18:07:38] [ERROR] Coordinator: submitProof failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7bf4462c92025cefdb131bcac61885d9be132a0015d5c714d6a0563fc47edb5a46", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 18:07:38] [WARN] Coordinator: proof submission failed for 0xb825b5f43e096e... — discarding
+[2026-05-03 18:07:38] [ERROR] Coordinator: submitProof failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7bf4462c92025cefdb131bcac61885d9be132a0015d5c714d6a0563fc47edb5a46", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 18:07:38] [WARN] Coordinator: proof submission failed for 0xb825b5f43e096e... — discarding
+[2026-05-03 18:07:38] [ERROR] Coordinator: incrementExperience failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7bf4462c92025cefdb131bcac61885d9be132a0015d5c714d6a0563fc47edb5a46", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 18:07:38] [ERROR] Coordinator: incrementExperience failed: execution reverted: "InferenceGuard: proof already consumed" (action="estimateGas", data="0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000026496e666572656e636547756172643a2070726f6f6620616c726561647920636f6e73756d65640000000000000000000000000000000000000000000000000000", reason="InferenceGuard: proof already consumed", transaction={ "data": "0x11db2a7bf4462c92025cefdb131bcac61885d9be132a0015d5c714d6a0563fc47edb5a46", "from": "0x5aD3EcA65Fba69eFaC716d792AbE1904162f1B10", "to": "0xFc3edaB7F7932c2Ce052F9B516051C60015c5Ba5" }, invocation=null, revert={ "args": [ "InferenceGuard: proof already consumed" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.13.4)
+[2026-05-03 18:07:38] [INFO] Coordinator: proposal executed — type: YIELD result: {"status":"api_unavailable","workflowId":"fallback-wf-1777811842778","error":"KeeperHubRestClient.triggerExecution faile
+[2026-05-03 18:07:38] [INFO] Coordinator: proposal executed — type: YIELD result: {"status":"api_unavailable","workflowId":"fallback-wf-1777811843084","error":"KeeperHubRestClient.triggerExecution faile
+[2026-05-03 18:07:38] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:43] [DEBUG] Coordinator: queue empty
+[2026-05-03 18:07:48] [DEBUG] Coordinator: queue empty
