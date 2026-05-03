@@ -1,17 +1,25 @@
 {
   "name": "sentinel",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Sentinel — multi-agent DeFi position guardian powered by 0G + KeeperHub",
+  "main": "runSystem.js",
   "scripts": {
-    "coordinator": "node agents/coordinator/index.js",
-    "system" : "node runSystem.js",
-    "yield-agent": "node ./yieldAgent.js",
+    "system":            "node runSystem.js",
+    "coordinator":       "node agents/coordinator/index.js",
+    "yield-agent":       "node yieldAgent.js",
+    "risk-agent":        "node agents/riskAgent/index.js",
     "publish-workflows": "node workflows/workflowPublisher.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy":            "npx hardhat run scripts/deploy.js --network galileo",
+    "deploy:pool":       "npx hardhat run scripts/deployMockPool.js --network galileo",
+    "deploy:usdc":       "npx hardhat run scripts/deployUSDC.js --network galileo",
+    "deploy:all":        "npm run deploy && npm run deploy:pool && npm run deploy:usdc",
+    "demo:trigger":      "npx hardhat run scripts/demoTrigger.js --network galileo",
+    "demo:reset":        "npx hardhat run scripts/demoReset.js --network galileo",
+    "compile":           "npx hardhat compile",
+    "test":              "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wasif",
   "license": "ISC",
-  "description": "Sentinel — multi-agent DeFi position guardian powered by 0G + KeeperHub",
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
     "ethers": "^6.13.4",

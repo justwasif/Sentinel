@@ -4,11 +4,6 @@ const axios = require('axios');
 const logger = require('../utils/logger');
 
 class KeeperHubRestClient {
-  /**
-   * @param {Object} config
-   * @param {string} config.apiKey - KeeperHub API key
-   * @param {string} config.baseUrl - KeeperHub base URL (e.g. https://api.keeperhub.io)
-   */
   constructor({ apiKey, baseUrl }) {
     if (!apiKey) {
       logger.warn('KeeperHubRestClient: no apiKey provided; requests will likely return 401');
@@ -28,15 +23,10 @@ class KeeperHubRestClient {
     });
   }
 
-  /**
-   * Creates a workflow on KeeperHub.
-   * @param {Object} workflowDefinition
-   * @returns {Promise<Object>} Created workflow object
-   */
   async createWorkflow(workflowDefinition) {
     try {
-      logger.debug(`KeeperHubRestClient: POST /v1/workflows — name: ${workflowDefinition.name || 'unnamed'}`);
-      const response = await this._client.post('/v1/workflows', workflowDefinition);
+      logger.debug(`KeeperHubRestClient: POST /api/workflows — name: ${workflowDefinition.name || 'unnamed'}`);
+      const response = await this._client.post('/api/workflows', workflowDefinition);
       const workflow = response.data;
       logger.info(`KeeperHubRestClient: workflow created — id: ${workflow.id || workflow.workflowId || JSON.stringify(workflow).slice(0, 60)}`);
       return workflow;
@@ -47,16 +37,10 @@ class KeeperHubRestClient {
     }
   }
 
-  /**
-   * Triggers execution of a workflow.
-   * @param {string} workflowId
-   * @param {Object} payload
-   * @returns {Promise<Object>} Execution result
-   */
   async triggerExecution(workflowId, payload) {
     try {
-      logger.debug(`KeeperHubRestClient: POST /v1/workflows/${workflowId}/execute`);
-      const response = await this._client.post(`/v1/workflows/${workflowId}/execute`, payload);
+      logger.debug(`KeeperHubRestClient: POST /api/workflows/${workflowId}/execute`);
+      const response = await this._client.post(`/api/workflows/${workflowId}/execute`, payload);
       const result = response.data;
       const execId = result.executionId || result.id || 'unknown';
       logger.info(`KeeperHubRestClient: execution triggered — executionId: ${execId}`);
@@ -68,15 +52,10 @@ class KeeperHubRestClient {
     }
   }
 
-  /**
-   * Gets the status of an execution.
-   * @param {string} executionId
-   * @returns {Promise<Object>} Status object
-   */
   async getExecutionStatus(executionId) {
     try {
-      logger.debug(`KeeperHubRestClient: GET /v1/executions/${executionId}`);
-      const response = await this._client.get(`/v1/executions/${executionId}`);
+      logger.debug(`KeeperHubRestClient: GET /api/executions/${executionId}`);
+      const response = await this._client.get(`/api/executions/${executionId}`);
       return response.data;
     } catch (err) {
       const status = err.response ? err.response.status : 'N/A';
@@ -85,16 +64,10 @@ class KeeperHubRestClient {
     }
   }
 
-  /**
-   * Publishes a workflow to the KeeperHub marketplace.
-   * @param {string} workflowId
-   * @param {Object} metadata
-   * @returns {Promise<Object>} Published listing
-   */
   async publishToMarketplace(workflowId, metadata) {
     try {
-      logger.debug(`KeeperHubRestClient: POST /v1/marketplace/publish — workflowId: ${workflowId}`);
-      const response = await this._client.post('/v1/marketplace/publish', {
+      logger.debug(`KeeperHubRestClient: POST /api/marketplace/publish — workflowId: ${workflowId}`);
+      const response = await this._client.post('/api/marketplace/publish', {
         workflowId,
         ...metadata,
       });

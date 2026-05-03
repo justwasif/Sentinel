@@ -8,5 +8,7 @@
   "deployedAt": "2026-04-29T08:34:24.372Z",
   "MockUniswapPool": "0x6111c3eb73CB49216556A0080e5C59086a5f7794",
   "demoTickLower": -500,
-  "demoTickUpper": 500
+  "demoTickUpper": 500,
+  "MockUSDC": "0x7c0B4F303f03dA90fE9790cf328B03414b71DF69",
+  "USDCDecimals": 6
 }
